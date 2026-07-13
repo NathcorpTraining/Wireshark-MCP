@@ -1,6 +1,8 @@
-# 🔍 Wireshark MCP Server
+# Wireshark MCP Server
 
-## 🚀 Overview
+
+
+## Overview
 
 Wireshark MCP Server bridges AI assistants and network packet analysis by exposing Wireshark/TShark functionality through the Model Context Protocol (MCP).
 
@@ -17,24 +19,24 @@ This project enables:
 * Live packet capture
 * AI-assisted network troubleshooting
 
----
+\---
 
 ## ✨ Features
 
-| Feature                  | Description                                    |
-| ------------------------ | ---------------------------------------------- |
-| 🔎 Protocol Discovery    | Identify all protocols present in a PCAP       |
-| 📦 Packet Search         | Search packets using Wireshark display filters |
-| 🌐 Conversation Analysis | Analyze communications between hosts           |
-| 🔄 Stream Following      | Follow TCP and UDP streams                     |
-| 📊 Traffic Statistics    | Generate protocol and traffic summaries        |
-| 🎯 Interface Discovery   | Enumerate available capture interfaces         |
-| ⚡ Live Capture           | Capture network traffic in real time           |
-| 🤖 MCP Integration       | Compatible with MCP clients and AI agents      |
-| 🌍 HTTP Transport        | Expose tools through HTTP                      |
-| 💻 STDIO Transport       | Native MCP STDIO support                       |
+|Feature|Description|
+|-|-|
+|🔎 Protocol Discovery|Identify all protocols present in a PCAP|
+|📦 Packet Search|Search packets using Wireshark display filters|
+|🌐 Conversation Analysis|Analyze communications between hosts|
+|🔄 Stream Following|Follow TCP and UDP streams|
+|📊 Traffic Statistics|Generate protocol and traffic summaries|
+|🎯 Interface Discovery|Enumerate available capture interfaces|
+|⚡ Live Capture|Capture network traffic in real time|
+|🤖 MCP Integration|Compatible with MCP clients and AI agents|
+|🌍 HTTP Transport|Expose tools through HTTP|
+|💻 STDIO Transport|Native MCP STDIO support|
 
----
+\---
 
 ## 🏗 Architecture
 
@@ -62,7 +64,7 @@ TShark          Wireshark
  └── Statistics
 ```
 
----
+\---
 
 ## 📁 Project Structure
 
@@ -79,15 +81,15 @@ app/
 │   ├── conversations.py
 │   ├── discovery.py
 │   ├── interfaces.py
-│   ├── live_capture.py
+│   ├── live\_capture.py
 │   ├── packets.py
-│   ├── save_capture.py
+│   ├── save\_capture.py
 │   ├── statistics.py
 │   └── streams.py
 │
 ├── transports/
-│   ├── http_transport.py
-│   └── stdio_transport.py
+│   ├── http\_transport.py
+│   └── stdio\_transport.py
 │
 ├── utils/
 │   └── tshark.py
@@ -100,9 +102,9 @@ run.py
 requirements.txt
 ```
 
----
+\---
 
-## ⚙️ Requirements
+## Requirements
 
 ### Software
 
@@ -116,14 +118,14 @@ Verify TShark installation:
 tshark -v
 ```
 
----
+\---
 
-## 🔧 Installation
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/KK-LogicWorks/Wireshark-mcp-server.git
+git clone https://github.com/NathcorpTraining/Wireshark-MCP.git
 
 cd Wireshark-mcp-server
 ```
@@ -139,7 +141,7 @@ Activate it:
 Windows:
 
 ```bash
-venv\Scripts\activate
+venv\\Scripts\\activate
 ```
 
 Linux/macOS:
@@ -154,27 +156,27 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
+\---
 
-## ⚙️ Configuration
+## Configuration
 
 Create a `.env` file:
 
 ```env
-TSHARK_PATH=C:\\Program Files\\Wireshark\\tshark.exe
+TSHARK\_PATH=C:\\\\Program Files\\\\Wireshark\\\\tshark.exe
 
-MAX_TIMEOUT=30
+MAX\_TIMEOUT=30
 
-MAX_PACKETS=10000
+MAX\_PACKETS=10000
 
-HTTP_HOST=0.0.0.0
+HTTP\_HOST=0.0.0.0
 
-HTTP_PORT=8080
+HTTP\_PORT=8080
 ```
 
----
+\---
 
-## 🚀 Running the Server
+## Running the Server
 
 ### STDIO Transport
 
@@ -194,9 +196,9 @@ Server endpoint:
 http://localhost:8080
 ```
 
----
+\---
 
-## 🛠 Available MCP Tools
+## Available MCP Tools
 
 ### Protocol Discovery
 
@@ -246,9 +248,9 @@ Persist temporary capture files for later analysis.
 
 Analyze communication patterns and traffic behavior.
 
----
+\---
 
-## 🤖 Example Use Cases
+## Example Use Cases
 
 ### Incident Response
 
@@ -274,9 +276,9 @@ Analyze communication patterns and traffic behavior.
 * Review communications between hosts
 * Identify unusual traffic behavior
 
----
+\---
 
-## 🔒 Security Notice
+## Security Notice
 
 This tool provides packet capture and analysis capabilities.
 
@@ -284,32 +286,32 @@ Only capture or analyze network traffic on systems and networks for which you ha
 
 The maintainers assume no responsibility for misuse of this software.
 
----
+\---
 
-## 🛣 Roadmap
+## Roadmap
 
 ### Current
 
-* [x] Protocol Discovery
-* [x] Packet Search
-* [x] Stream Analysis
-* [x] Conversation Analysis
-* [x] Statistics
-* [x] Live Capture
-* [x] HTTP Transport
-* [x] STDIO Transport
+* \[x] Protocol Discovery
+* \[x] Packet Search
+* \[x] Stream Analysis
+* \[x] Conversation Analysis
+* \[x] Statistics
+* \[x] Live Capture
+* \[x] HTTP Transport
+* \[x] STDIO Transport
 
 ### Planned
 
-* [ ] IOC Extraction
-* [ ] Threat Detection
-* [ ] Session Reconstruction
-* [ ] AI Investigation Workflows
-* [ ] Protocol Anomaly Detection
-* [ ] Export Reports
-* [ ] MITRE ATT&CK Mapping
+* \[ ] IOC Extraction
+* \[ ] Threat Detection
+* \[ ] Session Reconstruction
+* \[ ] AI Investigation Workflows
+* \[ ] Protocol Anomaly Detection
+* \[ ] Export Reports
+* \[ ] MITRE ATT\&CK Mapping
 
----
+\---
 
 ## 🤝 Contributing
 
@@ -320,7 +322,7 @@ Contributions, bug reports, and feature requests are welcome.
 3. Commit your changes
 4. Open a Pull Request
 
----
+\---
 
 ## 📄 License
 
@@ -328,7 +330,7 @@ Licensed under the MIT License.
 
 See the LICENSE file for details.
 
----
+\---
 
 ## ⭐ Support
 
@@ -339,5 +341,5 @@ If you find this project useful:
 * Submit feature requests
 * Contribute improvements
 
----
+\---
 
