@@ -26,6 +26,15 @@ class Settings(BaseSettings):
     DEFAULT_CAPTURE_DURATION: int = 10
     MAX_CAPTURE_SIZE_MB: int = 500
 
+    # Auto-discard unsaved temporary captures after this many
+    # seconds if the user declines to save or never responds.
+    CAPTURE_CLEANUP_TIMEOUT: int = 300
+
+    # Extra seconds allowed beyond the requested capture duration for
+    # tshark to flush the file and exit cleanly, so the subprocess
+    # timeout never lands on top of the capture's own duration timer.
+    CAPTURE_TIMEOUT_BUFFER: int = 30
+
     # Logging
     LOG_LEVEL: str = "INFO"
 

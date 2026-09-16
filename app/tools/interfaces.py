@@ -9,7 +9,7 @@ async def list_interfaces():
         "-D"
     ]
 
-    output = run_tshark(cmd)
+    output = await run_tshark(cmd)
 
     interfaces = []
 

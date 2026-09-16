@@ -1,6 +1,7 @@
 import os
 import shutil
 
+from app.utils.cleanup import cancel_cleanup
 
 async def save_capture(
     temporary_capture: str
@@ -16,6 +17,8 @@ async def save_capture(
                 "Temporary capture file not found."
             )
         }
+
+    cancel_cleanup(temporary_capture)
 
     filename = os.path.basename(
         temporary_capture

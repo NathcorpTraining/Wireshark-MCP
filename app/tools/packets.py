@@ -31,17 +31,18 @@ async def query_packets(
 
     cmd.extend([
         "-E",
-        "separator=|",
-        "-c",
-        str(limit)
+        "separator=|"
     ])
 
-    output = run_tshark(cmd)
+    output = await run_tshark(cmd)
 
     rows = []
 
     for line in output.splitlines():
         rows.append(line.split("|"))
+
+        if len(rows) >= limit:
+            break
 
     return {
         "fields": fields,
